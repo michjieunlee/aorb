@@ -3,9 +3,19 @@
 ## Backend
 
 ```json
-virtualenv env
+# create virtual env
+virtualenv -p python3 env
+
+# activate env
 source env/bin/activate
+
+# install packages
 pip install -r requirements.txt
+
+# db migrate
+python manage.py migrate
+
+# run server
 python manage.py runserver
 ```
 
