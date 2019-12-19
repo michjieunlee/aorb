@@ -80,7 +80,7 @@ class LoginForm extends React.Component {
               </Segment>
             </Form>
             <Message>
-              New to us? <NavLink to="/signup">Sign Up</NavLink>
+              New- to us? <NavLink to="/signup">Sign Up</NavLink>
             </Message>
           </React.Fragment>
         </Grid.Column>
