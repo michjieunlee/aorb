@@ -17,7 +17,7 @@ from .serializers import AorbSerializer
 def AorbView(request):
     if request.method == 'GET':
         aorbs = AorB.objects.all()
-        serializer = AorbSerializer(aorbs, manay=True)
+        serializer = AorbSerializer(aorbs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
