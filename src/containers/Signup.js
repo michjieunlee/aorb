@@ -31,10 +31,12 @@ class RegistrationForm extends React.Component {
 
   render() {
     const { username, email, password1, password2 } = this.state;
-    const { error, loading, token } = this.props;
+    const { error, loading, token, pending } = this.props;
     if (token) {
       return <Redirect to="/" />;
-    }
+    } else if (pending) {
+      return <Redirect to="/login" />;
+		}
     return (
       <Grid
         textAlign="center"
@@ -114,7 +116,8 @@ const mapStateToProps = state => {
   return {
     loading: state.auth.loading,
     error: state.auth.error,
-    token: state.auth.token
+    token: state.auth.token,
+		pending: state.auth.pending
   };
 };
 
