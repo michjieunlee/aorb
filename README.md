@@ -13,10 +13,12 @@ source env/bin/activate
 pip install -r requirements.txt
 
 # db migrate
-python manage.py migrate
+cd server && python manage.py migrate
+python server/manage.py migrate
 
 # run server
-python manage.py runserver
+cd server && python manage.py runserver
+python server/manage.py runserver
 ```
 
 ## Frontend

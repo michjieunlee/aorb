@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import AorB
+from api.models import Aorb
 
 
 class AorbSerializer(serializers.ModelSerializer):
     class Meta:
-        model = AorB
-        fields = '__all__'
+        model = Aorb
+        exclude = ['user']
